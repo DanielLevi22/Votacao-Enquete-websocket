@@ -1,0 +1,21 @@
+#create a poll
+POST http://localhost:3333/polls
+Content-Type: application/json
+
+{
+  "title" : "Qual o melhor framwork ?",
+  "options": ["expression", "Fastify", "NestJs"]
+}
+###
+#get a poll
+GET http://localhost:3333/polls/2c1262b9-8559-49c7-af90-a8d6793d84eb
+
+###
+#vote a poll
+POST  http://localhost:3333/polls/2c1262b9-8559-49c7-af90-a8d6793d84eb/votes
+Content-Type: application/json
+
+{
+  "pollOptionId" : "65e05884-6350-48ff-a821-dfd778835f00"
+}
+
